@@ -48,7 +48,7 @@ def ingest_file(
     Raises:
         ValueError: If a duplicate file is detected.
     """
-    from file_converter import convert_to_markdown
+    from file2md import convert_to_markdown  # github.com/liamsysmind/file2md
 
     content = convert_to_markdown(file_path)
 

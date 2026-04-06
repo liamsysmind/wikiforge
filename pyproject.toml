@@ -13,10 +13,5 @@ authors = [{name = "liamsysmind"}]
 
 [project.optional-dependencies]
 file-converter = [
-    "mammoth>=1.6.0",
-    "openpyxl>=3.1.0",
-    "pandas>=2.0.0",
-    "tabulate>=0.9.0",
-    "python-pptx>=0.6.23",
-    "PyMuPDF>=1.23.0",
+    "file2md @ git+https://github.com/liamsysmind/file2md.git",
 ]
