@@ -11,6 +11,9 @@ requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [{name = "liamsysmind"}]
 
+[tool.setuptools]
+packages = ["knowledge"]
+
 [project.optional-dependencies]
 file-converter = [
     "file2md @ git+https://github.com/liamsysmind/file2md.git",
