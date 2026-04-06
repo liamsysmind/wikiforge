@@ -59,12 +59,14 @@ def slugify(text: str, max_len: int = 60) -> str:
     return text.lower() if text else "untitled"
 
 
-def make_raw_id(title: str) -> str:
-    """Generate a raw article ID: {YYYYMMDD}_{HHMMSS}_{slug}"""
+def make_raw_id(title: str | None = None) -> str:
+    """Generate a raw article ID: {YYYYMMDD}_{HHMMSS}_{hash}. Pure timestamp + short hash, no slugified title."""
+    import hashlib
     now = datetime.now(timezone.utc)
     ts = now.strftime("%Y%m%d_%H%M%S")
-    slug = slugify(title)
-    return f"{ts}_{slug}"
+    seed = f"{ts}{title or ''}{id(now)}"
+    short_hash = hashlib.sha256(seed.encode()).hexdigest()[:6]
+    return f"{ts}_{short_hash}"
 
 
 # --- Frontmatter ---
