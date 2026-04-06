@@ -1,6 +1,6 @@
-# Knowledge
+# WikiForge
 
-Karpathy-style LLM Knowledge Base module.
+Karpathy-style LLM Knowledge Base. Forge structured wiki from raw materials.
 
 ```
 raw/     ← raw materials (articles, documents, URLs)
@@ -21,7 +21,7 @@ wiki/    ← self-repair: fix inconsistencies, fill gaps, build links
 ## Install
 
 ```bash
-pip install git+https://github.com/liamsysmind/knowledge.git
+pip install git+https://github.com/liamsysmind/wikiforge.git
 ```
 
 ## Quick Start

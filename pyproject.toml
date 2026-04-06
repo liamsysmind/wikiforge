@@ -3,9 +3,9 @@ requires = ["setuptools>=68.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "knowledge"
+name = "wikiforge"
 version = "0.1.0"
-description = "Karpathy-style LLM Knowledge Base — raw/ → compile → wiki/ → lint"
+description = "WikiForge — Karpathy-style LLM Knowledge Base. raw/ → compile → wiki/ → lint"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
